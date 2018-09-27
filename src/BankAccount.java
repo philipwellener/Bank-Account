@@ -19,10 +19,10 @@ public class BankAccount
 		balance = 0;
 	}
 	
-	public BankAccount(String name, int accNum, double bal)
+	public BankAccount(String name, int accNumber, double bal)
 	{
 		name = "Philip Wellener";
-		accNum = 14;
+		accNum = accNumber;
 		balance = bal;
 	}
 	
