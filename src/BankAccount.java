@@ -12,15 +12,18 @@ public class BankAccount
 	private int accNum;
 	private double balance;
 	
-	public BankAccount(String name, int accNum)
+	public BankAccount(String name, int accNumber)
+	{
+		name = "Philip Wellener";
+		accNum = accNumber;
+		balance = 0;
+	}
+	
+	public BankAccount(String name, int accNum, double bal)
 	{
 		name = "Philip Wellener";
 		accNum = 14;
-	}
-	
-	public BankAccount(double balance)
-	{
-		balance = 0;
+		balance = bal;
 	}
 	
 	public void deposit(double deposit)
@@ -38,13 +41,9 @@ public class BankAccount
 		return balance;
 	}
 	
-	//Error with toString
-	//Type mismatch: cannot convert from int/double to String
 	public String toString()
 	{
-		return name;
-		return accNum;
-		return balance;
+		return "Name: " + name + "\naccNum: " + accNum + "\nBalance: " + balance;
 	}
 
 }
