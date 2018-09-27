@@ -12,28 +12,29 @@ public class BankAccount
 	private int accNum;
 	private double balance;
 	
-	public BankAccount(String name, int accNumber)
+	public BankAccount(String n, int aN, double bal)
 	{
-		name = "Philip Wellener";
-		accNum = accNumber;
-		balance = 0;
-	}
-	
-	public BankAccount(String name, int accNumber, double bal)
-	{
-		name = "Philip Wellener";
-		accNum = accNumber;
+		name = n;
+		accNum = aN;
 		balance = bal;
 	}
 	
-	public void deposit(double deposit)
+	public BankAccount(String n, int aN)
 	{
-		balance = balance + deposit;
+		name = n;
+		accNum = aN;
+		balance = 0;
+	}
+
+	public void withdraw(double amt)
+	{
+		balance -= amt;
 	}
 	
-	public void withdraw(double withdraw)
+	
+	public void deposit(double amt)
 	{
-		balance = balance - withdraw;
+		balance += amt;
 	}
 	
 	public double getBalance()
@@ -43,7 +44,7 @@ public class BankAccount
 	
 	public String toString()
 	{
-		return "Name: " + name + "\nAccount Number: " + accNum + "\nBalance: " + balance;
+		return "Name: " + name + "\tAccount Number: " + accNum + "\tBalance: " + balance;
 	}
 
 }
